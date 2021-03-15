@@ -1,6 +1,6 @@
 {
   "name": "jrd-carousel",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lightweight carousel written in vanilla JS",
   "main": "dist/main.js",
   "scripts": {
