@@ -52,7 +52,7 @@ function JrdCarousel(domId, options) {
 
       imageNodeWrapper.classList.add('jrdc-image')
       imageNode.src = images[i].src
-      imageNode.alt = images[i].alt
+      imageNode.alt = images[i].alt || ''
       imageNodeWrapper.appendChild(imageNode)
       state.mountedImages = [...state.mountedImages, imageNodeWrapper]
     }
@@ -107,7 +107,7 @@ function JrdCarousel(domId, options) {
     const imageNode = new Image()
     imageNodeWrapper.classList.add('jrdc-image')
     imageNode.src = images[imageIndex].src
-    imageNode.alt = images[imageIndex].alt
+    imageNode.alt = images[imageIndex].alt || ''
     imageNodeWrapper.appendChild(imageNode)
 
     state.mountedImages = [...state.mountedImages, imageNodeWrapper]

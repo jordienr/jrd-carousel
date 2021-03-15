@@ -39,9 +39,18 @@ JrdCarousel is a carousel component written 100% in JavaScript.
 
   const options = {
     images: [
-      'https://images.com/image1.jpg',
-      'https://images.com/image2.jpg',
-      'https://images.com/image3.jpg'
+      {
+        src: 'https://images.com/image0.jpg',
+        alt: 'Image alt 0'
+      },
+      {
+        src: 'https://images.com/image1.jpg',
+        alt: 'Image alt 1'
+      },
+      {
+        src: 'https://images.com/image2.jpg',
+        alt: 'Image alt 2'
+      },
     ]
   }
 
@@ -70,8 +79,12 @@ Holds the settings for the carousel
 
 - **images**: `string[]`
 Required
-Array with urls to the images. They will be loaded in order
+Array with `image` objects. They will be loaded in order
+
+Must have a src attribute and a alt attribute.
+
 __
+
 - **autoplay**: `boolean`
 Optional
 Default: `true`
@@ -92,7 +105,20 @@ By default the component will load the first 2 images and lazy load the rest whe
 // Options example
 
 const options = {
-  images: ['https://images.com/img1.jpg', 'https://images.com/img2.jpg', 'https://images.com/img3.jpg'],
+  images: [
+      {
+        src: 'https://images.com/image0.jpg',
+        alt: 'Image alt 0'
+      },
+      {
+        src: 'https://images.com/image1.jpg',
+        alt: 'Image alt 1'
+      },
+      {
+        src: 'https://images.com/image2.jpg',
+        alt: 'Image alt 2'
+      },
+    ],
   imagesToPreload: 1,
   interval: 3000
 }
