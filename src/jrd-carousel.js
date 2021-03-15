@@ -15,8 +15,8 @@ function JrdCarousel(domId, options) {
     return dot
   })
 
+  
   // Error prevention
-
   function throwError(error) {
     throw new Error(error)
   }
@@ -49,8 +49,10 @@ function JrdCarousel(domId, options) {
       const imageNodeWrapper = document.createElement('div')
       const imageNode = document.createElement('img')
 
+
       imageNodeWrapper.classList.add('jrdc-image')
-      imageNode.src = images[i]
+      imageNode.src = images[i].src
+      imageNode.alt = images[i].alt
       imageNodeWrapper.appendChild(imageNode)
       state.mountedImages = [...state.mountedImages, imageNodeWrapper]
     }
@@ -88,7 +90,6 @@ function JrdCarousel(domId, options) {
 
 
   // Auto swipe on interval
-
   const autoInterval = setInterval(() => {
     if (autoplay) {
       nextPage()
@@ -105,7 +106,8 @@ function JrdCarousel(domId, options) {
     const imageNodeWrapper = document.createElement('div')
     const imageNode = new Image()
     imageNodeWrapper.classList.add('jrdc-image')
-    imageNode.src = images[imageIndex]
+    imageNode.src = images[imageIndex].src
+    imageNode.alt = images[imageIndex].alt
     imageNodeWrapper.appendChild(imageNode)
 
     state.mountedImages = [...state.mountedImages, imageNodeWrapper]
@@ -134,16 +136,6 @@ function JrdCarousel(domId, options) {
     imagesWrapper.childNodes[0].classList.toggle('jrdc-slide-out')
     imagesWrapper.childNodes[0].classList.toggle('jrdc-slide-in')
   }
-  
-  // Mount html & add css // TODO: Template string might be cleaner
-  (function mount() {
-    mountImagesToPreload()
-    mountButtons()
-    mountBody()
-    mountFooter()
-    
-    update()
-  })()
 
   // Events
   leftBtn.addEventListener('click', () => {
@@ -155,7 +147,7 @@ function JrdCarousel(domId, options) {
     nextPage()
   })
 
-
+  // Update functions
   function syncImageWithPage() {
     imagesWrapper.innerHTML = ''
     imagesWrapper.appendChild(state.mountedImages[state.currentPage])
@@ -170,6 +162,16 @@ function JrdCarousel(domId, options) {
     syncImageWithPage()
     syncDotsWithPage()
   }
+
+  // Mount html & add css // TODO?: Template string might be cleaner
+  (function mount() {
+    mountImagesToPreload()
+    mountButtons()
+    mountBody()
+    mountFooter()
+    
+    update()
+  })()
 }
 
 module.exports = JrdCarousel
