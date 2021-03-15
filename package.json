@@ -1,0 +1,11 @@
+{
+  "name": "jrd-carousel",
+  "version": "0.0.1",
+  "description": "Lightweight carousel written in vanilla JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Jordi Enric Roig Ramis (@jordienr)",
+  "license": "MIT"
+}
