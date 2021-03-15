@@ -4,8 +4,26 @@
   "description": "Lightweight carousel written in vanilla JS",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --silent",
+    "start": "npm run dev",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development"
   },
   "author": "Jordi Enric Roig Ramis (@jordienr)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@types/jest": "^26.0.20",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^26.6.3",
+    "style-loader": "^2.0.0",
+    "svg-url-loader": "^7.1.1",
+    "webpack": "^5.25.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
 }
