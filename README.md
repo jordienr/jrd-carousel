@@ -11,7 +11,6 @@ JrdCarousel is a carousel component written 100% in JavaScript.
 
 ## Roadmap
 
-- [ ] Accept alt property for images
 - [ ] Make it work with arrow keys
 - [ ] Preload next image
 - [ ] Animations
