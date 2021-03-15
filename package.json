@@ -1,7 +1,7 @@
 {
   "name": "jrd-carousel",
   "version": "0.1.0",
-  "description": "Lightweight carousel written in vanilla JS",
+  "description": "Lightweight (3.7kb gzipped) carousel written in vanilla JS",
   "main": "dist/main.js",
   "scripts": {
     "test": "jest --silent",
