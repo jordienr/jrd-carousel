@@ -1,6 +1,6 @@
 # JrdCarousel
 
-JrdCarousel is a carousel component written 100% in JavaScript.
+Lightweight (3.7kb gzipped) carousel written in JS
 
 # TOC
 
@@ -11,9 +11,9 @@ JrdCarousel is a carousel component written 100% in JavaScript.
 
 ## Roadmap
 
-- [ ] Make it work with arrow keys
-- [ ] Preload next image
 - [ ] Animations
+- [ ] Make it work with arrow keys (a11y)
+- [ ] Preload next image (?)
 
 ## Get started
 
