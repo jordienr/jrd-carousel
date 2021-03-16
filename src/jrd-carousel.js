@@ -1,6 +1,6 @@
 function JrdCarousel(domId, options) {
 
-  const { images = [], interval = 1500, autoplay = true, imagesToPreload = 2 } = options
+  const { images = [], interval = 1500, autoplay = true, imagesToPreload = 2, width = 640, height = 340 } = options
   const carouselWrapper = document.getElementById(domId)
   const leftBtn = document.createElement('button')
   const rightBtn = document.createElement('button')
@@ -53,6 +53,8 @@ function JrdCarousel(domId, options) {
       imageNodeWrapper.classList.add('jrdc-image')
       imageNode.src = images[i].src
       imageNode.alt = images[i].alt || ''
+      imageNode.width = width
+      imageNode.height = height
       imageNodeWrapper.appendChild(imageNode)
       state.mountedImages = [...state.mountedImages, imageNodeWrapper]
     }
@@ -102,12 +104,14 @@ function JrdCarousel(domId, options) {
 
   // Lazy load images
   function loadImage(imageIndex) {
-    // TODO: Load next image instead of current ?
+    // TODO?: Load next image instead of current
     const imageNodeWrapper = document.createElement('div')
     const imageNode = new Image()
     imageNodeWrapper.classList.add('jrdc-image')
     imageNode.src = images[imageIndex].src
     imageNode.alt = images[imageIndex].alt || ''
+    imageNode.width = width
+    imageNode.height = height
     imageNodeWrapper.appendChild(imageNode)
 
     state.mountedImages = [...state.mountedImages, imageNodeWrapper]

@@ -99,6 +99,14 @@ Optional
 Default: `2`
 How many images you want to preload when the component is mounted.
 By default the component will load the first 2 images and lazy load the rest when they have to be shown.
+--
+- **height**: `number`
+Default: `360`
+The height attribute in the `<img>` tag.
+--
+- **width**: `number`
+Default: `640`
+The width attribute in the `<img>` tag.
 
 ```js
 // Options example
