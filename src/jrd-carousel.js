@@ -85,7 +85,9 @@ function JrdCarousel(domId, options) {
   function mountButtons() {
 
     leftBtn.classList.add('jrdc-button', 'jrdc-button--left')
+    leftBtn['aria-label'] = 'Carousel Left'
     rightBtn.classList.add('jrdc-button', 'jrdc-button--right')
+    rightBtn['aria-label'] = 'Carousel Right'
 
   }
 
